@@ -1,31 +1,31 @@
-# 바이낸스 비트코인 최소수량 거래 프로그램 (보안 강화)
+# Binance Bitcoin Minimum Quantity Trading Program (Security Enhanced)
 
-이 프로그램은 바이낸스 API를 사용하여 비트코인의 최소수량을 사고팔 수 있는 보안이 강화된 C++ 트레이딩 프로그램입니다.
+This is a security-enhanced C++ trading program that can buy and sell minimum quantities of Bitcoin using the Binance API.
 
-## 🚀 빠른 시작
+## 🚀 Quick Start
 
-**Windows 사용자:**
+**Windows Users:**
 ```batch
 docker-run.bat
 ```
 
-**Linux/macOS 사용자:**
+**Linux/macOS Users:**
 ```bash
 ./docker-run.sh
 ```
 
-프로그램이 자동으로 빌드되고 실행됩니다!
+The program will automatically build and run!
 
-## 주요 기능
+## Key Features
 
-### 현물거래 기능
-- 계정 잔고 조회 (BTC, USDT)
-- 다양한 암호화폐 현재 가격 조회
-- 최소수량으로 암호화폐 구매/판매
-- 사용자 정의 수량으로 암호화폐 구매/판매
-- 실시간 주문 실행 및 결과 확인
+### Spot Trading Features
+- Account balance inquiry (BTC, USDT)
+- Current price inquiry for various cryptocurrencies
+- Buy/sell cryptocurrencies with minimum quantity
+- Buy/sell cryptocurrencies with custom quantity
+- Real-time order execution and result confirmation
 
-**지원 자산 (현물거래):**
+**Supported Assets (Spot Trading):**
 - BTC (Bitcoin) 
 - ETH (Ethereum)
 - BNB (Binance Coin)
@@ -39,18 +39,18 @@ docker-run.bat
 - LTC (Litecoin)
 - LINK (Chainlink)
 
-*참고: 현재 실제 구매/판매는 BTC만 지원되며, 다른 자산은 가격 조회만 가능합니다.*
+*Note: Currently, actual buying/selling is only supported for BTC, while other assets support price inquiry only.*
 
-### 선물거래 기능 🚀
-- **선물거래 계정 정보 조회**: 마진 잔고, 미실현 손익, 사용 가능한 잔고 확인
-- **포지션 관리**: 현재 포지션 조회, 수익률 및 손익 실시간 확인
-- **레버리지 설정**: 1x~125x 레버리지 자유 설정
-- **롱/숏 포지션**: 시장가 주문으로 롱/숏 포지션 진입
-- **포지션 종료**: 원클릭으로 포지션 완전 종료
-- **지정가 주문**: 원하는 가격에 지정가 주문 실행
-- **리스크 관리**: 미실현 손익 실시간 모니터링
+### Futures Trading Features 🚀
+- **Futures Account Information**: Check margin balance, unrealized P&L, available balance
+- **Position Management**: View current positions, real-time profit/loss tracking
+- **Leverage Setting**: Freely set 1x~125x leverage
+- **Long/Short Positions**: Enter long/short positions with market orders
+- **Position Closing**: Close positions completely with one click
+- **Limit Orders**: Execute limit orders at desired prices
+- **Risk Management**: Real-time unrealized P&L monitoring
 
-**지원 자산 (선물거래):**
+**Supported Assets (Futures Trading):**
 - BTC (Bitcoin)
 - ETH (Ethereum)
 - BNB (Binance Coin)
@@ -64,37 +64,37 @@ docker-run.bat
 - LTC (Litecoin)
 - LINK (Chainlink)
 
-*모든 선물거래 기능은 위 자산들에 대해 완전히 지원됩니다.*
+*All futures trading features are fully supported for the above assets.*
 
-### 🔍 선물거래 심볼 목록 조회 기능 (메뉴 18)
-- **실시간 목록**: 바이낸스 API에서 실제 거래 가능한 심볼들을 실시간으로 조회
-- **인기 코인 우선 표시**: BTC, ETH, BNB 등 인기 코인들을 먼저 보여줌
-- **알파벳 순 정렬**: 전체 목록을 알파벳 순으로 정렬하여 찾기 쉽게 표시
-- **상세 정보 제공**: 각 심볼의 최소 주문 수량, 최소 주문 금액, 거래 상태 등 표시
-- **100+ 심볼 지원**: 비트코인부터 알트코인까지 100개 이상의 USDT 페어 지원
+### 🔍 Futures Trading Symbol List Query Feature (Menu 18)
+- **Real-time List**: Query actually tradable symbols from Binance API in real-time
+- **Popular Coins First**: Show popular coins like BTC, ETH, BNB first
+- **Alphabetical Sorting**: Sort entire list alphabetically for easy searching
+- **Detailed Information**: Display minimum order quantity, minimum order amount, trading status for each symbol
+- **100+ Symbols Support**: Support 100+ USDT pairs from Bitcoin to altcoins
 
-이 기능을 통해 어떤 암호화폐가 선물거래 가능한지 미리 확인할 수 있습니다!
+This feature allows you to check which cryptocurrencies are available for futures trading in advance!
 
-### 보안 기능 🔒
-- **암호화된 API 키 저장**: API 키와 시크릿 키를 암호화하여 안전하게 저장
-- **마스터 비밀번호 시스템**: 하나의 마스터 비밀번호로 모든 키를 보호
-- **24시간 세션 관리**: 한 번 인증하면 24시간 동안 유효한 세션 유지
-- **자동 세션 만료**: 24시간 후 자동으로 세션 만료 및 재인증 요구
-- **안전한 메모리 관리**: 민감한 데이터를 메모리에서 안전하게 제거
-- **비밀번호 숨김 입력**: 비밀번호 입력 시 화면에 표시되지 않음
-- **키 관리 기능**: 저장된 키 삭제, 마스터 비밀번호 변경 등
+### Security Features 🔒
+- **Encrypted API Key Storage**: API keys and secret keys are encrypted and stored safely
+- **Master Password System**: Protect all keys with one master password
+- **24-hour Session Management**: Valid session maintained for 24 hours after one authentication
+- **Automatic Session Expiration**: Session automatically expires after 24 hours, requiring re-authentication
+- **Secure Memory Management**: Safely remove sensitive data from memory
+- **Hidden Password Input**: Passwords are not displayed on screen during input
+- **Key Management Features**: Delete stored keys, change master password, etc.
 
-### Docker 지원 🐳
-- **크로스 플랫폼**: Mac, Linux, Windows 어디서든 동일하게 작동
-- **의존성 자동 해결**: 필요한 모든 라이브러리가 컨테이너에 포함
-- **간편한 실행**: 스크립트 하나로 빌드부터 실행까지 자동화
-- **이중 보안 모드**: 편의성과 보안 강화 중 선택 가능
-  - **일반 모드**: 데이터 지속성 (호스트 저장)
-  - **보안 강화 모드**: 컨테이너 격리 (내부 저장)
+### Docker Support 🐳
+- **Cross-platform**: Works identically on Mac, Linux, Windows
+- **Automatic Dependency Resolution**: All necessary libraries included in container
+- **Easy Execution**: Automated from build to execution with one script
+- **Dual Security Mode**: Choose between convenience and enhanced security
+  - **Normal Mode**: Data persistence (host storage)
+  - **Enhanced Security Mode**: Container isolation (internal storage)
 
-## 필요한 의존성
+## Required Dependencies
 
-### macOS (Homebrew 사용)
+### macOS (Using Homebrew)
 ```bash
 brew install curl openssl pkg-config cmake
 ```
@@ -105,50 +105,50 @@ sudo apt-get update
 sudo apt-get install libcurl4-openssl-dev libssl-dev pkg-config cmake build-essential
 ```
 
-## 컴파일 및 실행
+## Compilation and Execution
 
-### 방법 1: Docker 사용 (권장) 🐳
+### Method 1: Using Docker (Recommended) 🐳
 
-Docker를 사용하면 Mac, Linux, Windows 어느 환경에서도 동일하게 작동합니다.
+Using Docker works identically on Mac, Linux, and Windows environments.
 
-1. **Docker 및 Docker Compose 설치**
-   - [Docker Desktop](https://www.docker.com/products/docker-desktop/) 설치
+1. **Install Docker and Docker Compose**
+   - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-2. **프로젝트 빌드 및 실행**
+2. **Build and Run Project**
 
-**간단한 실행 (권장):**
+**Simple Execution (Recommended):**
 ```bash
-# 보안 강화 모드로 실행
+# Run in enhanced security mode
 # Linux/macOS
 ./docker-run.sh
 # Windows
 docker-run.bat
 ```
 
-**수동 실행:**
+**Manual Execution:**
 ```bash
-# 보안 강화 모드
+# Enhanced security mode
 docker-compose -f docker-compose-secure.yml up --build
-# 또는
+# or
 docker build -f Dockerfile.secure -t binance-trader-secure .
 docker run -it --rm --security-opt no-new-privileges:true --tmpfs /tmp:rw,noexec,nosuid,size=100m binance-trader-secure
 ```
 
-3. **보안 강화 모드**
-   - 암호화된 키 파일이 컨테이너 내부에서만 저장됩니다
-   - 컨테이너 삭제 시 데이터도 완전히 삭제됩니다
-   - 강력한 보안, 호스트에서 접근 불가능
-   - 비밀번호는 화면에 표시되지 않지만 정상적으로 입력됩니다
+3. **Enhanced Security Mode**
+   - Encrypted key files are stored only inside the container
+   - Data is completely deleted when container is removed
+   - Strong security, inaccessible from host
+   - Passwords are not displayed on screen but input normally
 
-4. **테스트 완료 환경**
-   - ✅ **Windows 10/11**: Docker Desktop 사용
-   - ✅ **Ubuntu 20.04**: Docker 컨테이너 내부에서 빌드 및 실행
-   - ✅ **의존성 자동 설치**: libcurl, OpenSSL, CMake, build-essential
-   - ✅ **코드 호환성**: C++ 17 표준 준수
+4. **Tested Environments**
+   - ✅ **Windows 10/11**: Using Docker Desktop
+   - ✅ **Ubuntu 20.04**: Build and run inside Docker container
+   - ✅ **Automatic Dependency Installation**: libcurl, OpenSSL, CMake, build-essential
+   - ✅ **Code Compatibility**: C++ 17 standard compliance
 
-### 방법 2: 직접 컴파일
+### Method 2: Direct Compilation
 
-1. 프로젝트 빌드
+1. Build Project
 ```bash
 mkdir build
 cd build
@@ -156,120 +156,120 @@ cmake ..
 make
 ```
 
-2. 프로그램 실행
+2. Run Program
 ```bash
 ./binance_trader
 ```
 
-## 바이낸스 API 키 설정
+## Binance API Key Setup
 
-1. [바이낸스](https://www.binance.com)에 로그인
-2. API Management로 이동
-3. 새 API 키 생성
-4. **권한 설정**:
-   - **현물거래만 사용**: Spot Trading 권한만 활성화
-   - **선물거래 포함**: Spot Trading + Futures Trading 권한 활성화 🚀
-   - **권장**: IP 제한을 설정하여 보안 강화
-5. API 키와 시크릿 키를 안전하게 보관
+1. Login to [Binance](https://www.binance.com)
+2. Go to API Management
+3. Create new API key
+4. **Permission Settings**:
+   - **Spot Trading Only**: Enable only Spot Trading permission
+   - **Including Futures Trading**: Enable Spot Trading + Futures Trading permissions 🚀
+   - **Recommended**: Set IP restrictions for enhanced security
+5. Keep API key and secret key safe
 
-### 선물거래 추가 설정 ⚠️
-- 바이낸스 선물거래 계정을 먼저 활성화해야 합니다
-- 선물거래 계정에 USDT를 입금하세요 (현물과 별도 계정)
-- 기본 레버리지는 안전한 1x로 설정됩니다 (필요시 수동으로 변경 가능)
-- 선물거래는 높은 리스크를 수반하므로 충분한 학습 후 사용하세요
+### Additional Futures Trading Setup ⚠️
+- First activate Binance futures trading account
+- Deposit USDT to futures trading account (separate from spot account)
+- Default leverage is set to safe 1x (can be manually changed if needed)
+- Futures trading involves high risk, use only after sufficient learning
 
-## 사용법
+## Usage
 
-### 첫 실행 시
-1. 프로그램 실행
-2. 새 마스터 비밀번호 설정 (2번 입력하여 확인)
-3. 바이낸스 API 키와 시크릿 키 입력
-4. 키가 암호화되어 안전하게 저장됨
+### First Run
+1. Run program
+2. Set new master password (enter twice for confirmation)
+3. Enter Binance API key and secret key
+4. Keys are encrypted and stored safely
 
-### 이후 실행 시
-1. 프로그램 실행
-2. 마스터 비밀번호 입력 (24시간 동안 유효)
-3. 자동으로 암호화된 키 불러오기
+### Subsequent Runs
+1. Run program
+2. Enter master password (valid for 24 hours)
+3. Automatically load encrypted keys
 
-### 메뉴 옵션
+### Menu Options
 
-**현물거래 기능:**
-1. **계정 정보 조회**: 현재 BTC와 USDT 잔고를 확인
-2. **암호화폐 현재 가격 조회**: 선택한 암호화폐의 현재 시장 가격 조회
-3. **암호화폐 최소수량 구매**: 거래소에서 허용하는 최소수량으로 암호화폐 구매
-4. **암호화폐 최소수량 판매**: 거래소에서 허용하는 최소수량으로 암호화폐 판매
-5. **사용자 정의 수량으로 구매**: 원하는 수량으로 암호화폐 구매
-6. **사용자 정의 수량으로 판매**: 원하는 수량으로 암호화폐 판매
+**Spot Trading Features:**
+1. **Account Information Query**: Check current BTC and USDT balance
+2. **Cryptocurrency Current Price Query**: Query current market price of selected cryptocurrency
+3. **Buy Cryptocurrency Minimum Quantity**: Buy cryptocurrency with minimum quantity allowed by exchange
+4. **Sell Cryptocurrency Minimum Quantity**: Sell cryptocurrency with minimum quantity allowed by exchange
+5. **Buy with Custom Quantity**: Buy cryptocurrency with desired quantity
+6. **Sell with Custom Quantity**: Sell cryptocurrency with desired quantity
 
-**선물거래 기능:**
-11. **선물거래 계정 정보 조회**: 마진 잔고, 미실현 손익, 사용 가능한 잔고 확인
-12. **선물거래 포지션 조회**: 선택한 암호화폐의 현재 포지션 상태 및 수익률 확인
-13. **레버리지 설정**: 선택한 암호화폐의 1x~125x 레버리지 설정 (기본값: 1x 안전 모드)
-14. **롱 포지션 진입**: 선택한 암호화폐로 시장가 롱 포지션 진입 (가격 상승 베팅)
-15. **숏 포지션 진입**: 선택한 암호화폐로 시장가 숏 포지션 진입 (가격 하락 베팅)
-16. **포지션 종료**: 선택한 암호화폐의 현재 포지션을 즉시 종료하여 손익 실현
-17. **선물거래 지정가 주문**: 선택한 암호화폐에 대해 원하는 가격에 지정가 주문 실행
-18. **선물거래 가능한 심볼 목록 조회**: 바이낸스에서 실제 거래 가능한 모든 USDT 페어 조회 🆕
+**Futures Trading Features:**
+11. **Futures Account Information Query**: Check margin balance, unrealized P&L, available balance
+12. **Futures Position Query**: Check current position status and profit rate for selected cryptocurrency
+13. **Leverage Setting**: Set 1x~125x leverage for selected cryptocurrency (default: 1x safe mode)
+14. **Enter Long Position**: Enter market long position for selected cryptocurrency (bet on price increase)
+15. **Enter Short Position**: Enter market short position for selected cryptocurrency (bet on price decrease)
+16. **Close Position**: Immediately close current position for selected cryptocurrency to realize P&L
+17. **Futures Limit Order**: Execute limit order at desired price for selected cryptocurrency
+18. **Query Futures Trading Symbol List**: Query all actually tradable USDT pairs on Binance 🆕
 
-**시스템 기능:**
-7. **세션 상태 확인**: 현재 세션의 유효성 및 만료 시간 확인
-8. **주문 권한 테스트**: 실제 거래 없이 API 키의 거래 권한 확인 🔧
-9. **저장된 키 삭제**: 암호화된 키 파일을 완전히 삭제
-10. **마스터 비밀번호 변경**: 기존 비밀번호를 새 비밀번호로 변경
+**System Features:**
+7. **Session Status Check**: Check current session validity and expiration time
+8. **Order Permission Test**: Test API key trading permissions without actual trading 🔧
+9. **Delete Stored Keys**: Completely delete encrypted key files
+10. **Change Master Password**: Change existing password to new password
 
-## 보안 주의사항
+## Security Warnings
 
-### 강화된 보안 기능
-- ✅ **암호화된 저장**: API 키가 암호화되어 로컬에 저장됩니다
-- ✅ **마스터 비밀번호**: 하나의 강력한 비밀번호로 모든 키를 보호합니다
-- ✅ **세션 관리**: 24시간 후 자동으로 재인증이 필요합니다
-- ✅ **메모리 보안**: 민감한 데이터가 메모리에서 안전하게 제거됩니다
+### Enhanced Security Features
+- ✅ **Encrypted Storage**: API keys are encrypted and stored locally
+- ✅ **Master Password**: Protect all keys with one strong password
+- ✅ **Session Management**: Re-authentication required after 24 hours
+- ✅ **Memory Security**: Sensitive data is safely removed from memory
 
-### 추가 보안 권장사항
-- **절대로** API 키와 시크릿 키를 코드에 하드코딩하지 마세요
-- API 키에는 최소한의 권한만 부여하세요 (Spot Trading만)
-- IP 제한을 설정하여 보안을 강화하세요
-- 마스터 비밀번호는 강력하게 설정하세요 (8자 이상, 특수문자 포함)
-- 테스트넷에서 먼저 테스트해보는 것을 권장합니다
-- 정기적으로 마스터 비밀번호를 변경하세요
+### Additional Security Recommendations
+- **Never** hardcode API keys and secret keys in code
+- Grant only minimum permissions to API keys (Spot Trading only)
+- Set IP restrictions for enhanced security
+- Set master password strongly (8+ characters, include special characters)
+- Recommend testing on testnet first
+- Change master password regularly
 
-## 최소 주문 수량
+## Minimum Order Quantity
 
-- BTCUSDT 쌍의 최소 주문 수량은 일반적으로 0.00001 BTC입니다
-- 프로그램이 자동으로 최소 주문 수량을 조회하여 표시합니다
+- Minimum order quantity for BTCUSDT pair is typically 0.00001 BTC
+- Program automatically queries and displays minimum order quantity
 
-## 주의사항
+## Warnings
 
-### 일반 주의사항
-- 이 프로그램은 교육 및 테스트 목적으로 작성되었습니다
-- 실제 거래 시에는 충분한 테스트와 검증을 거치세요
-- 시장 주문(Market Order)을 사용하므로 슬리피지가 발생할 수 있습니다
-- 거래 수수료가 적용됩니다
+### General Warnings
+- This program is written for educational and testing purposes
+- Test thoroughly before actual trading
+- Slippage may occur as market orders are used
+- Trading fees apply
 
-### 선물거래 특별 주의사항 ⚠️
-- **높은 리스크**: 선물거래는 레버리지로 인해 큰 손실이 발생할 수 있습니다
-- **자금 관리**: 투자할 수 있는 금액의 일부만 사용하세요
-- **레버리지 주의**: 높은 레버리지는 큰 수익과 함께 큰 손실 위험을 수반합니다
-- **강제 청산**: 손실이 증가하면 포지션이 강제로 청산될 수 있습니다
-- **24시간 거래**: 선물시장은 24시간 변동하므로 지속적인 모니터링이 필요합니다
-- **교육 필수**: 선물거래에 대한 충분한 이해 없이 사용하지 마세요
-- **테스트넷 권장**: 실제 거래 전에 바이낸스 테스트넷에서 먼저 연습하세요
+### Special Futures Trading Warnings ⚠️
+- **High Risk**: Futures trading can cause large losses due to leverage
+- **Fund Management**: Use only a portion of investable amount
+- **Leverage Caution**: High leverage involves risk of large losses along with large profits
+- **Forced Liquidation**: Positions may be forcibly liquidated if losses increase
+- **24-hour Trading**: Futures markets fluctuate 24 hours, requiring continuous monitoring
+- **Education Required**: Do not use without sufficient understanding of futures trading
+- **Testnet Recommended**: Practice on Binance testnet before actual trading
 
-## 문제 해결
+## Troubleshooting
 
-### 대화형 입력 문제 (비밀번호 입력) 🔑
+### Interactive Input Issues (Password Input) 🔑
 
-#### 문제: 비밀번호 입력 시 반응하지 않음
+#### Problem: No response when entering password
 ```
-처음 사용하시는군요! 새로운 마스터 비밀번호를 설정하세요.
-새 마스터 비밀번호를 입력하세요: [여기서 입력이 안 되는 것처럼 보임]
+First time user! Please set a new master password.
+Enter new master password: [Seems like input doesn't work here]
 ```
 
-**원인:** Windows PowerShell에서 Docker 컨테이너의 대화형 입력이 제대로 작동하지 않는 경우
+**Cause:** Interactive input in Docker container may not work properly in Windows PowerShell
 
-**해결 방법:**
+**Solutions:**
 
-1. **대화형 전용 스크립트 사용 (권장):**
+1. **Use Interactive-only Script (Recommended):**
    ```bash
    # Windows
    docker-run-secure-interactive.bat
@@ -278,7 +278,7 @@ make
    ./docker-run-secure-interactive.sh
    ```
 
-2. **직접 Docker 명령 사용:**
+2. **Use Direct Docker Command:**
    ```bash
    docker run -it --rm --name binance-trader-secure \
      --security-opt no-new-privileges:true \
@@ -286,311 +286,311 @@ make
      binance-trader-secure
    ```
 
-3. **Windows Terminal 사용:**
-   - PowerShell 대신 Windows Terminal 사용
-   - 더 나은 대화형 지원 제공
+3. **Use Windows Terminal:**
+   - Use Windows Terminal instead of PowerShell
+   - Provides better interactive support
 
-**⚠️ 중요사항:**
-- 🔐 **비밀번호 입력 시 화면에 표시되지 않지만 입력은 됩니다**
-- ⌨️ **천천히 정확하게 입력하고 Enter를 누르세요**
-- 🔄 **비밀번호 확인 시 동일하게 입력해야 합니다**
-- 💡 **입력 중에 커서가 움직이지 않아도 정상입니다**
+**⚠️ Important Notes:**
+- 🔐 **Password input is not displayed on screen but is being entered**
+- ⌨️ **Type slowly and accurately, then press Enter**
+- 🔄 **Password confirmation must be entered identically**
+- 💡 **Cursor may not move during input but this is normal**
 
-### Docker 관련 문제
+### Docker-related Issues
 
-#### 컨테이너 이름 충돌 오류
+#### Container Name Conflict Error
 ```
 docker: Error response from daemon: Conflict. The container name "/binance-trader-secure" is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.
 ```
 
-**원인:** 이전에 실행된 컨테이너가 남아있어서 같은 이름으로 새 컨테이너를 만들 수 없음
+**Cause:** Previous container remains, preventing creation of new container with same name
 
-**해결 방법:**
+**Solutions:**
 
-1. **기존 컨테이너 삭제 후 새로 실행 (권장):**
+1. **Delete existing container and run new one (Recommended):**
    ```bash
-   # 기존 컨테이너 강제 삭제
+   # Force delete existing container
    docker rm -f binance-trader-secure
    
-   # 다시 실행
+   # Run again
    ./docker-run-secure-interactive.bat
    ```
 
-2. **기존 컨테이너가 실행 중인 경우 접속:**
+2. **Connect to existing running container:**
    ```bash
-   # 실행 중인 컨테이너에 접속
+   # Connect to running container
    docker exec -it binance-trader-secure /bin/bash
    
-   # 또는 프로그램 직접 실행
+   # Or run program directly
    docker exec -it binance-trader-secure ./build/binance_trader
    ```
 
-3. **기존 컨테이너 상태 확인:**
+3. **Check existing container status:**
    ```bash
-   # 컨테이너 상태 확인
+   # Check container status
    docker ps -a | findstr binance-trader-secure
    
-   # 실행 중이면: STATUS가 "Up"
-   # 중지됨이면: STATUS가 "Exited"
+   # If running: STATUS shows "Up"
+   # If stopped: STATUS shows "Exited"
    ```
 
-4. **중지된 컨테이너 재시작:**
+4. **Restart stopped container:**
    ```bash
-   # 중지된 컨테이너 시작
+   # Start stopped container
    docker start binance-trader-secure
    
-   # 시작 후 접속
+   # Connect after start
    docker exec -it binance-trader-secure ./build/binance_trader
    ```
 
-5. **완전 정리 후 새로 시작 (추천):**
+5. **Complete cleanup and fresh start (Recommended):**
    ```bash
-   # 모든 관련 컨테이너 삭제
+   # Delete all related containers
    docker rm -f binance-trader-secure
    
-   # 이미지도 삭제하고 싶다면
+   # Also delete image if desired
    docker rmi binance-trader-secure
    
-   # 새로 실행
+   # Run fresh
    ./docker-run-secure-interactive.bat
    ```
 
-**💡 가장 간단한 해결책:**
+**💡 Simplest Solution:**
 ```bash
 docker rm -f binance-trader-secure && ./docker-run-secure-interactive.bat
 ```
 
-#### Docker Desktop 실행 오류
+#### Docker Desktop Execution Error
 ```
 error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/..."
 ```
-**해결 방법:**
-1. Docker Desktop이 실행되고 있는지 확인
-2. Windows 시작 메뉴에서 "Docker Desktop" 실행
-3. 시스템 트레이에서 Docker 고래 아이콘 확인
-4. Docker Desktop 완전 시작까지 1-2분 대기
+**Solution:**
+1. Check if Docker Desktop is running
+2. Run "Docker Desktop" from Windows Start menu
+3. Check Docker whale icon in system tray
+4. Wait 1-2 minutes for Docker Desktop to fully start
 
-#### Docker Compose 버전 경고
+#### Docker Compose Version Warning
 ```
 the attribute `version` is obsolete
 ```
-**해결 방법:** 이미 수정되었습니다. 최신 Docker Compose에서는 version 속성이 불필요합니다.
+**Solution:** Already fixed. Version attribute is unnecessary in latest Docker Compose.
 
-### 컴파일 오류
+### Compilation Errors
 
-#### C++ 예약어 충돌
+#### C++ Reserved Word Conflict
 ```
 error: 'signed' specified with 'bool'
 ```
-**해결 방법:** 이미 수정되었습니다. `signed` 매개변수를 `is_signed`로 변경했습니다.
+**Solution:** Already fixed. Changed `signed` parameter to `is_signed`.
 
-#### OpenSSL 헤더 오류
+#### OpenSSL Header Error
 ```
 fatal error: openssl/pbkdf2.h: No such file or directory
 ```
-**해결 방법:** 이미 수정되었습니다. 사용하지 않는 헤더를 제거했습니다.
+**Solution:** Already fixed. Removed unused headers.
 
-### 직접 컴파일 시 문제
-- OpenSSL과 libcurl이 제대로 설치되었는지 확인
-- pkg-config가 라이브러리를 찾을 수 있는지 확인
-- Visual Studio Build Tools (Windows) 설치 확인
+### Direct Compilation Issues
+- Check if OpenSSL and libcurl are properly installed
+- Check if pkg-config can find libraries
+- Check Visual Studio Build Tools installation (Windows)
 
-### API 오류 및 거래 실패
+### API Errors and Trading Failures
 
-#### 문제: 구매/판매 주문이 실행되지 않음
+#### Problem: Buy/sell orders not executing
 ```
-정말 구매하시겠습니까? (y/N): y
-구매 주문을 실행하는 중...
-주문 실패: [오류 메시지]
+Do you really want to buy? (y/N): y
+Executing buy order...
+Order failed: [Error message]
 ```
 
-**일반적인 원인과 해결 방법:**
+**Common Causes and Solutions:**
 
-1. **API 키 권한 부족**
-   - 바이낸스에서 API 키 설정 확인
-   - **Spot Trading** 권한이 활성화되어 있는지 확인
-   - **Enable Trading** 옵션이 체크되어 있는지 확인
+1. **Insufficient API Key Permissions**
+   - Check API key settings in Binance
+   - Verify **Spot Trading** permission is enabled
+   - Check if **Enable Trading** option is checked
 
-2. **IP 제한 설정**
-   - 바이낸스 API 관리에서 IP 제한 확인
-   - 현재 IP 주소가 허용 목록에 있는지 확인
-   - 또는 IP 제한을 해제 (보안상 권장하지 않음)
+2. **IP Restriction Settings**
+   - Check IP restrictions in Binance API management
+   - Verify current IP address is in allowed list
+   - Or disable IP restrictions (not recommended for security)
 
-3. **잔고 부족**
-   - USDT 잔고가 구매 금액보다 충분한지 확인
-   - 최소 구매 금액: 약 $1-2 (현재 BTC 가격에 따라 변동)
+3. **Insufficient Balance**
+   - Check if USDT balance is sufficient for purchase amount
+   - Minimum purchase amount: approximately $1-2 (varies with current BTC price)
 
-4. **최소 주문 수량 미달**
-   - 최소 주문 수량: 0.00001000 BTC
-   - 현재 BTC 가격 기준 최소 주문 금액 확인
+4. **Below Minimum Order Quantity**
+   - Minimum order quantity: 0.00001000 BTC
+   - Check minimum order amount based on current BTC price
 
-5. **네트워크 연결 문제**
-   - 인터넷 연결 상태 확인
-   - 방화벽이 바이낸스 API 접근을 차단하는지 확인
+5. **Network Connection Issues**
+   - Check internet connection status
+   - Check if firewall blocks Binance API access
 
-6. **시장 상황**
-   - 거래 일시 중단 시간이 아닌지 확인
-   - 바이낸스 서버 점검 시간이 아닌지 확인
+6. **Market Conditions**
+   - Check if not during trading suspension time
+   - Check if not during Binance server maintenance
 
-**디버깅 방법:**
+**Debugging Methods:**
 
-1. **주문 권한 테스트 사용 (메뉴 8번)**: 🔧
+1. **Use Order Permission Test (Menu 8)**: 🔧
    ```
-   === 주문 권한 테스트 ===
-   실제 거래 없이 주문 권한을 테스트합니다.
+   === Order Permission Test ===
+   Test order permissions without actual trading.
    
-   구매 권한 테스트 중...
-   ✅ 구매 권한: 정상
-   판매 권한 테스트 중...
-   ✅ 판매 권한: 정상
+   Testing buy permission...
+   ✅ Buy permission: Normal
+   Testing sell permission...
+   ✅ Sell permission: Normal
    
-   🎉 모든 주문 권한이 정상입니다! 실제 거래가 가능합니다.
+   🎉 All order permissions are normal! Actual trading is possible.
    ```
 
-2. **API 응답 확인**:
-   - 프로그램 실행 시 "API 응답" 메시지를 확인
-   - 구체적인 오류 코드와 메시지 확인
-   - 바이낸스 API 문서에서 해당 오류 코드 의미 확인
+2. **Check API Response**:
+   - Check "API Response" messages during program execution
+   - Check specific error codes and messages
+   - Look up error code meanings in Binance API documentation
 
-3. **권한 상세 확인**:
-   - 프로그램 시작 시 거래 권한 상태 자동 확인
-   - "❌ 거래 권한: 비활성화됨" 메시지 시 바이낸스 설정 확인
+3. **Detailed Permission Check**:
+   - Trading permission status automatically checked at program start
+   - Check Binance settings when "❌ Trading Permission: Disabled" message appears
 
-**추가 확인사항:**
-- API 키와 시크릿 키가 올바른지 확인
-- 계정에 충분한 잔고가 있는지 확인
-- 테스트넷이 아닌 실제 계정인지 확인
+**Additional Checks:**
+- Verify API key and secret key are correct
+- Check if account has sufficient balance
+- Verify it's actual account, not testnet
 
-### 네트워크 오류
-- 인터넷 연결 상태 확인
-- 방화벽 설정 확인
-- 바이낸스 API 서버 상태 확인
+### Network Errors
+- Check internet connection status
+- Check firewall settings
+- Check Binance API server status
 
-## 파일 저장 위치
+## File Storage Locations
 
-### 암호화된 키 파일
+### Encrypted Key Files
 
-**Docker 일반 모드:**
-- 호스트 시스템: `./data/keys.enc`
-- 컨테이너 내부: `/app/data/keys.enc`
+**Docker Normal Mode:**
+- Host system: `./data/keys.enc`
+- Inside container: `/app/data/keys.enc`
 
-**Docker 보안 강화 모드:**
-- 컨테이너 내부에서만: `/app/secure_data/keys.enc`
-- 호스트에서 접근 불가능
+**Docker Enhanced Security Mode:**
+- Inside container only: `/app/secure_data/keys.enc`
+- Inaccessible from host
 
-**직접 실행 시:**
+**Direct Execution:**
 - **Windows**: `%USERPROFILE%\.binance_trader\keys.enc`
 - **Linux/macOS**: `~/.binance_trader/keys.enc`
 
-이 파일은 마스터 비밀번호로 암호화되어 있으며, 비밀번호 없이는 복호화할 수 없습니다.
+This file is encrypted with master password and cannot be decrypted without the password.
 
-## Docker 사용 시 추가 명령어
+## Additional Docker Commands
 
-### 컨테이너 관리
+### Container Management
 
-**일반 모드:**
+**Normal Mode:**
 ```bash
-# 백그라운드에서 실행
+# Run in background
 docker-compose up -d
 
-# 실행 중인 컨테이너에 접속
+# Connect to running container
 docker-compose exec binance-trader /bin/bash
 
-# 컨테이너 중지
+# Stop container
 docker-compose down
 
-# 컨테이너 및 이미지 삭제
+# Delete container and images
 docker-compose down --rmi all
 ```
 
-**보안 강화 모드:**
+**Enhanced Security Mode:**
 ```bash
-# 백그라운드에서 실행
+# Run in background
 docker-compose -f docker-compose-secure.yml up -d
 
-# 실행 중인 컨테이너에 접속
+# Connect to running container
 docker-compose -f docker-compose-secure.yml exec binance-trader-secure /bin/bash
 
-# 컨테이너 중지
+# Stop container
 docker-compose -f docker-compose-secure.yml down
 
-# 컨테이너 및 이미지 삭제
+# Delete container and images
 docker-compose -f docker-compose-secure.yml down --rmi all
 ```
 
-### 로그 확인
+### Log Checking
 
-**일반 모드:**
+**Normal Mode:**
 ```bash
-# 실시간 로그 확인
+# Check real-time logs
 docker-compose logs -f
 
-# 특정 컨테이너 로그 확인
+# Check specific container logs
 docker logs binance-trader
 ```
 
-**보안 강화 모드:**
+**Enhanced Security Mode:**
 ```bash
-# 실시간 로그 확인
+# Check real-time logs
 docker-compose -f docker-compose-secure.yml logs -f
 
-# 특정 컨테이너 로그 확인
+# Check specific container logs
 docker logs binance-trader-secure
 ```
 
-## 빌드 성공 확인
+## Build Success Confirmation
 
-프로그램이 성공적으로 빌드되면 다음과 같은 메시지가 표시됩니다:
+When program builds successfully, following message is displayed:
 
 ```
-✅ 빌드 성공!
-🚀 프로그램이 시작되었습니다...
+✅ Build successful!
+🚀 Program started...
 
-=== 바이낸스 비트코인 최소수량 거래 프로그램 (보안 강화) ===
+=== Binance Bitcoin Minimum Quantity Trading Program (Security Enhanced) ===
 
-처음 사용하시는군요! 새로운 마스터 비밀번호를 설정하세요.
+First time user! Please set a new master password.
 ```
 
-### 해결된 주요 문제들
-- ✅ **C++ 예약어 충돌**: `signed` → `is_signed`로 수정
-- ✅ **OpenSSL 헤더 호환성**: 불필요한 `pbkdf2.h` 헤더 제거
-- ✅ **Docker Compose 버전 경고**: 최신 형식으로 업데이트
-- ✅ **크로스 플랫폼 빌드**: Ubuntu 20.04 컨테이너에서 안정적 빌드
-- ✅ **대화형 입력 문제**: 보안 강화 모드에서 비밀번호 입력 개선
-- ✅ **거래 실패 디버깅**: API 응답 출력 및 권한 확인 기능 추가
-- ✅ **수량 포맷팅**: 8자리 소수점 정확한 포맷팅으로 주문 오류 방지
-- ✅ **주문 권한 테스트**: 실제 거래 없이 API 키 권한 사전 확인 기능
+### Resolved Major Issues
+- ✅ **C++ Reserved Word Conflict**: Fixed `signed` → `is_signed`
+- ✅ **OpenSSL Header Compatibility**: Removed unnecessary `pbkdf2.h` header
+- ✅ **Docker Compose Version Warning**: Updated to latest format
+- ✅ **Cross-platform Build**: Stable build in Ubuntu 20.04 container
+- ✅ **Interactive Input Issues**: Improved password input in enhanced security mode
+- ✅ **Trading Failure Debugging**: Added API response output and permission check features
+- ✅ **Quantity Formatting**: Prevented order errors with accurate 8-decimal formatting
+- ✅ **Order Permission Test**: Pre-check API key permissions without actual trading
 
-## 보안 모드 비교
+## Security Mode Comparison
 
-### 일반 모드 vs 보안 강화 모드
+### Normal Mode vs Enhanced Security Mode
 
-| 항목 | 일반 모드 | 보안 강화 모드 |
-|------|----------|----------------|
-| **데이터 저장** | 호스트 `./data/` | 컨테이너 내부만 |
-| **데이터 지속성** | ✅ 컨테이너 삭제 후에도 유지 | ❌ 컨테이너 삭제 시 함께 삭제 |
-| **호스트 접근** | ⚠️ 호스트에서 파일 접근 가능 | ✅ 호스트에서 접근 불가능 |
-| **컨테이너 격리** | 🔒 기본 격리 | 🔐 강화된 격리 |
-| **권한 제한** | 기본 권한 | 최소 권한 (비특권 사용자) |
-| **파일시스템** | 읽기/쓰기 | 읽기 전용 (데이터 디렉토리 제외) |
-| **보안 옵션** | 기본 설정 | `--security-opt`, `--cap-drop` 적용 |
-| **백업 편의성** | ✅ 쉬움 | ⚠️ 컨테이너 실행 중에만 가능 |
+| Item | Normal Mode | Enhanced Security Mode |
+|------|-------------|------------------------|
+| **Data Storage** | Host `./data/` | Container internal only |
+| **Data Persistence** | ✅ Maintained after container deletion | ❌ Deleted with container |
+| **Host Access** | ⚠️ Files accessible from host | ✅ Inaccessible from host |
+| **Container Isolation** | 🔒 Basic isolation | 🔐 Enhanced isolation |
+| **Permission Restriction** | Default permissions | Minimum permissions (unprivileged user) |
+| **File System** | Read/write | Read-only (except data directory) |
+| **Security Options** | Default settings | `--security-opt`, `--cap-drop` applied |
+| **Backup Convenience** | ✅ Easy | ⚠️ Only possible while container running |
 
-### 보안 강화 모드 특징
+### Enhanced Security Mode Features
 
-**적용된 보안 기능:**
-- 🔐 **비특권 사용자 실행**: root 권한 없이 실행
-- 🔒 **읽기 전용 파일시스템**: 시스템 파일 변경 방지
-- 🛡️ **권한 제한**: 불필요한 시스템 권한 제거
-- 🔑 **컨테이너 격리**: 호스트 시스템과 완전 분리
-- 🚫 **새 권한 획득 방지**: `no-new-privileges` 적용
+**Applied Security Features:**
+- 🔐 **Unprivileged User Execution**: Run without root privileges
+- 🔒 **Read-only File System**: Prevent system file changes
+- 🛡️ **Permission Restrictions**: Remove unnecessary system permissions
+- 🔑 **Container Isolation**: Complete separation from host system
+- 🚫 **Prevent New Privilege Acquisition**: `no-new-privileges` applied
 
-**권장 사용 시나리오:**
-- 🏢 **프로덕션 환경**: 실제 거래 시 최고 보안 필요
-- 🔐 **민감한 환경**: 높은 보안 요구사항
-- 🧪 **일회성 테스트**: 테스트 후 완전 삭제 필요
-- 🌐 **공유 시스템**: 다른 사용자와 시스템 공유 시
+**Recommended Usage Scenarios:**
+- 🏢 **Production Environment**: Maximum security needed for actual trading
+- 🔐 **Sensitive Environment**: High security requirements
+- 🧪 **One-time Testing**: Complete deletion needed after testing
+- 🌐 **Shared Systems**: When sharing system with other users
 
-## 라이센스
+## License
 
-이 프로젝트는 교육 목적으로 제공되며, 사용자의 책임 하에 사용하세요. 
+This project is provided for educational purposes. Use at your own responsibility. 
