@@ -1,0 +1,49 @@
+# Build directories
+build/
+bin/
+
+# Secure storage files (중요: API 키가 저장되는 파일들)
+secure_data/
+*.encrypted
+*.key
+*.dat
+api_keys.txt
+secret_keys.txt
+
+# Docker volumes
+.docker_data/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled Object files
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+
+# Executables
+*.exe
+binance_trader
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp 
