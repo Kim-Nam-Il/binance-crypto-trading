@@ -1,0 +1,13 @@
+services:
+  binance-trader:
+    build: .
+    container_name: binance-trader
+    volumes:
+      # 암호화된 키 파일을 호스트에 저장
+      - ./data:/app/data
+    environment:
+      # 데이터 저장 경로 설정
+      - BINANCE_DATA_PATH=/app/data
+    stdin_open: true
+    tty: true
+    restart: unless-stopped 

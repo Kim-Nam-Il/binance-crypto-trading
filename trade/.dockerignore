@@ -1,0 +1,28 @@
+# 빌드 디렉토리
+build/
+**/build/
+
+# IDE 파일
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# Git 파일
+.git/
+.gitignore
+
+# 로그 파일
+*.log
+
+# 임시 파일
+*.tmp
+*.temp
+
+# 데이터 파일
+data/
+*.enc 

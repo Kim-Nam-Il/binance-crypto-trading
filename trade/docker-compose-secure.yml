@@ -1,0 +1,22 @@
+services:
+  binance-trader-secure:
+    build:
+      context: .
+      dockerfile: Dockerfile.secure
+    container_name: binance-trader-secure
+    # 볼륨 마운트 제거 - 컨테이너 내부에서만 저장
+    environment:
+      # 컨테이너 내부 경로로 설정
+      - BINANCE_DATA_PATH=/app/secure_data
+    stdin_open: true
+    tty: true
+    # 보안 강화 옵션
+    security_opt:
+      - no-new-privileges:true
+    # 읽기 전용 루트 파일시스템 (데이터 디렉토리 제외)
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=100m
+    # 네트워크 격리 (필요시)
+    # network_mode: none
+    restart: "no"  # 자동 재시작 비활성화 (보안상) 
